@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>記帳</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: "微軟雅黑 Light";
+        }
+
+        .fakeimg {
+            height: 200px;
+        }
+
+        .jumbotron {
+            background-color: #c1e2b3;
+        }
+        /*container容器用来固定宽度，配合响应式布局*/
+        .container {
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+    <div class="jumbotron text-center" style="margin-bottom:0px">
+        <div class="col">
+            <h1 class="shadow-lg p-3 mb-5 bg-body rounded">難波萬的記帳系統</h1>
+
+            <p class="text-left text-muted">記帳是非常重要的，了解自己的花費!</p>
+
+
+        </div>
+        <div class="col" style="width:10000px;">
+            <img src="0111.PNG" class="rounded-circle" alt="Cinque Terre">
+
+        </div>
+    </div>
+ 
+
+
+
+    <section id='YA' style="padding:60px;">
+
+
+        <div class="card bg-warning text-white">
+            <div class="card-body">Don't eat too much!!!!</div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col" style="padding:30px; margin:0 auto;">
+                <img src="0107.png" style="width:400px; height:auto;" />
+
+            </div>
+
+            <div class="col-md-6">
+
+                <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                    <p>
+                        每餐限制花費：<input type="number" id="b" name="b" placeholder="X" min="0" max="1000" style="padding:8px 28px;" /> 元+
+                        <input type="number" id="a" name="a" placeholder="0請打0" min="0" max="1000" style="padding:8px 28px;" />元
+                    </p>
+
+
+
+
+
+                    <p>日期：<input type="date" name="name" id="x1" placeholder="??/??/??" style="padding:8px 28px;">
+                    <!--<button onclick="check1()" type="button" class="btn-success">儲存</button>--></p>
+
+
+
+                    <div class="row" style="padding:10px;">
+                        <p>目標限制金額：<output name="result" for="a b">0</output>元</p>
+                    </div>
+
+                    <div class="row" style="padding:10px;">
+
+                        <p>實際花費金額：<input name="species" type="text" id="x2" placeholder="X" style="padding:8px 28px;">元</p>
+                    </div>
+
+
+
+
+
+
+                    <!--<button onclick="check2()" type="button" id="B1" class="btn-success">儲存</button>-->
+
+                    <!--<button onclick="tale1()">抓出</button>-->
+
+
+                    <div class="row" style="padding:10px; padding-top:80px;">
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">選擇類別</button>
+
+
+
+
+                        <div id="demo" class="collapse">
+                            <p> 類別</p>
+                            <p><input type="text" id="c1" placeholder="填選:食衣住行育樂擇一"></p>
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="row" style="padding:10px; padding-top:30px;">
+                        <p>備註：<textarea name="comments" id="t1" placeholder="細項"></textarea></p>
+                    </div>
+
+                    <div>  <p class="bg-info text-white">請記得送出資料。</p>
+                    </div>
+
+                    <div class="row" style="padding:10px;">
+
+                        <button onclick="check2()" type="button" class="btn btn-success btn-lg" data-toggle="collapse">送出資料</button>
+
+                    
+
+                    </div>
+                    <div id="jacky">
+
+                    </div>
+
+
+
+                    <div class='col-md-2.5 text-left' style=" padding-top: 50px; padding-left:15px;">
+                        <a class="btn btn-primary btn-lg" href="page2.html" role="button" style="white-space: nowrap;">記錄頁面</a>
+
+
+
+                    </div>
+                </form>    
+            </div>
+        </div>
+
+    </section>
+</body>
+<script>
+    function check2() {
+        var marco = document.getElementById("x2").value;
+        var str = "x"
+        localStorage.setItem('money', document.getElementById("x2").value);
+        var jackytwo = document.createElement('h1');
+        var marcodate = document.getElementById("x1").value;
+        var kenny1 = document.getElementById("c1").value;
+        var rex = document.getElementById("t1").value;
+        localStorage.setItem('備註', document.getElementById("t1").value);
+        localStorage.setItem('date', document.getElementById("x1").value);
+        document.getElementById('jacky').appendChild(jackytwo);
+        $("h1:last").text("日期：" + marcodate + "元  類別：" + kenny1 + " 總金額：" + marco + "元   " +rex);
+
+
+        localStorage.setItem('date', document.getElementById("x1").value);
+        localStorage.setItem('類別', document.getElementById("c1").value);
+
+
+
+
+
+
+
+        //document.write(document.getElementById("c1").value)
+    }   
+
+    function check1() {
+
+
+
+    }
+
+    function take1() {
+        localStorage.getItem('money');
+
+    }
+
+
+</script>
+</html>
+
